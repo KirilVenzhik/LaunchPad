@@ -1,0 +1,99 @@
+## Build output
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+build/
+bld/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+ 
+## .NET / MSBuild
+*.dll
+*.exe
+*.pdb
+*.cache
+*.tmp
+project.lock.json
+project.fragment.lock.json
+artifacts/
+*.binlog
+ 
+## Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.userprefs
+*.rsuser
+*.vspscc
+*.vssscc
+ 
+## Rider / JetBrains
+.idea/
+*.sln.iml
+ 
+## VS Code (left command settings, hide personal)
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+ 
+## Test / coverage
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.trx
+*.coverage
+*.coveragexml
+coverage*.json
+coverage*.xml
+coverage*.info
+TestResults/
+ 
+## NuGet
+*.nupkg
+*.snupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+*.nuget.props
+*.nuget.targets
+ 
+## Publish / deploy
+[Pp]ublish/
+publish/
+*.[Pp]ublish.xml
+PublishScripts/
+*.azurePubxml
+*.pubxml
+*.pubxml.user
+ 
+## ---------------------------------------------
+## SECRETS AND LOCAL SETTINGS
+## ---------------------------------------------
+# Local configuration overrides (passwords DB, tokens etc.)
+appsettings.*.local.json
+appsettings.Local.json
+**/appsettings.*.local.json
+# files with secrets / environment variables
+*.env
+.env
+.env.*
+secrets.json
+# docker override with local creds
+docker-compose.override.yml
+ 
+## OS
+.DS_Store
+Thumbs.db
+desktop.ini
+ 
+## Logs
+*.log
+logs/
+ 

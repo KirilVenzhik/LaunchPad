@@ -1,0 +1,18 @@
+<Solution>
+  <Folder Name="/src/" />
+  <Folder Name="/src/Services/">
+    <Project Path="src/Services/LaunchPad.Catalog/LaunchPad.Catalog.csproj" Id="878497b1-7faa-469c-b3fe-afba1b52d0b5" />
+    <Project Path="src/Services/LaunchPad.Ingestion/LaunchPad.Ingestion.csproj" Id="394ed820-01d7-4f97-b854-78718ffd771b" />
+    <Project Path="src/Services/LaunchPad.Notifications/LaunchPad.Notifications.csproj" Id="edf462f1-4341-4eea-af82-b9b4158b537c" />
+    <Project Path="src/Services/LaunchPad.Subscriptions/LaunchPad.Subscriptions.csproj" Id="b47df2cf-1f9a-48ca-9ba3-8645ee6c8f65" />
+  </Folder>
+  <Folder Name="/src/Shared/">
+    <Project Path="src/Shared/LaunchPad.BuildingBlocks/LaunchPad.BuildingBlocks.csproj" Id="9b954a4a-390c-4f2a-b59a-d6445e82dc8c" />
+    <Project Path="src/Shared/LaunchPad.Contracts/LaunchPad.Contracts.csproj" Id="34905f7a-7f76-4fba-a21b-db7b0c39e69c" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/LaunchPad.Catalog.UnitTests/LaunchPad.Catalog.UnitTests.csproj" Id="a8878740-b753-4b38-8f40-a034a61ced96" />
+    <Project Path="tests/LaunchPad.Ingestion.UnitTests/LaunchPad.Ingestion.UnitTests.csproj" Id="0393cec2-7599-4d6b-beb7-2eee8dad7203" />
+    <Project Path="tests/LaunchPad.IntegrationTests/LaunchPad.IntegrationTests.csproj" Id="984697ba-e4fa-4d18-ad7f-6e9034747d9a" />
+  </Folder>
+</Solution>
