@@ -21,7 +21,7 @@ public record LaunchUpserted
 
 public record AgencyPayload
 {
-    public required Guid Ll2Id { get; init; }
+    public required int Ll2Id { get; init; }
     public required string Name { get; init; }
     public string? Abbrev { get; init; }
     public string? Type { get; init; }
@@ -30,15 +30,15 @@ public record AgencyPayload
 
 public record RocketConfigPayload
 {
-    public required Guid Ll2Id { get; init; }
+    public required int Ll2Id { get; init; }
     public required string FullName { get; init; }
     public string? Family { get; init; }
-    public int ReusableStages { get; init; }
+    public bool Reusable { get; init; }
 }
 
 public record PadPayload
 {
-    public required Guid Ll2Id { get; init; }
+    public required int Ll2Id { get; init; }
     public required string Name { get; init; }
     public string? CountryCode { get; init; }
     public double? Latitude { get; init; }

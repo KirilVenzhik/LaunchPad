@@ -77,10 +77,10 @@ public class LaunchUpsertedConsumer(CatalogDbContext db) : IConsumer<LaunchUpser
         if (rocket is null) 
         { 
             rocket = RocketConfig.Create(
-                rocketConfigPayload.Ll2Id, 
-                rocketConfigPayload.FullName, 
-                rocketConfigPayload.Family, 
-                rocketConfigPayload.ReusableStages); 
+                rocketConfigPayload.Ll2Id,
+                rocketConfigPayload.FullName,
+                rocketConfigPayload.Family,
+                rocketConfigPayload.Reusable);
             db.RocketConfigs.Add(rocket); 
         }
         return rocket;

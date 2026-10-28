@@ -11,7 +11,7 @@ public class AgencyConfiguration : IEntityTypeConfiguration<Agency>
         builder.ToTable("agencies");
         builder.HasKey(x => x.Id);
         builder.Property(x => x.Type).HasConversion<short>();
-        builder.Property(x => x.CountryCode).HasMaxLength(2).IsFixedLength();
+        builder.Property(x => x.CountryCode).HasMaxLength(10);
         builder.HasIndex(x => x.Ll2Id).IsUnique();
         builder.HasIndex(x => x.CountryCode);
     }

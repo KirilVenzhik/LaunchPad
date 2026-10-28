@@ -10,7 +10,7 @@ public class PadConfiguration : IEntityTypeConfiguration<Pad>
     {
         builder.ToTable("pads");
         builder.HasKey(x => x.Id);
-        builder.Property(x => x.CountryCode).HasMaxLength(2).IsFixedLength();
+        builder.Property(x => x.CountryCode).HasMaxLength(10);
         builder.HasIndex(x => x.Ll2Id).IsUnique();
     }
 }

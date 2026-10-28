@@ -18,11 +18,11 @@ namespace LaunchPad.Catalog.Infrastructure.Migrations
                 {
                     id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    ll2id = table.Column<Guid>(type: "uuid", nullable: false),
+                    ll2id = table.Column<int>(type: "integer", nullable: false),
                     name = table.Column<string>(type: "text", nullable: false),
                     abbrev = table.Column<string>(type: "text", nullable: true),
                     type = table.Column<short>(type: "smallint", nullable: false),
-                    country_code = table.Column<string>(type: "character(2)", fixedLength: true, maxLength: 2, nullable: true)
+                    country_code = table.Column<string>(type: "character varying(10)", maxLength: 10, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -35,9 +35,9 @@ namespace LaunchPad.Catalog.Infrastructure.Migrations
                 {
                     id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    ll2id = table.Column<Guid>(type: "uuid", nullable: false),
+                    ll2id = table.Column<int>(type: "integer", nullable: false),
                     name = table.Column<string>(type: "text", nullable: false),
-                    country_code = table.Column<string>(type: "character(2)", fixedLength: true, maxLength: 2, nullable: true),
+                    country_code = table.Column<string>(type: "character varying(10)", maxLength: 10, nullable: true),
                     latitude = table.Column<double>(type: "double precision", nullable: true),
                     longitude = table.Column<double>(type: "double precision", nullable: true)
                 },
@@ -52,10 +52,10 @@ namespace LaunchPad.Catalog.Infrastructure.Migrations
                 {
                     id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    ll2id = table.Column<Guid>(type: "uuid", nullable: false),
+                    ll2id = table.Column<int>(type: "integer", nullable: false),
                     full_name = table.Column<string>(type: "text", nullable: false),
                     family = table.Column<string>(type: "text", nullable: true),
-                    reusable_stages = table.Column<int>(type: "integer", nullable: false)
+                    reusable = table.Column<bool>(type: "boolean", nullable: false)
                 },
                 constraints: table =>
                 {

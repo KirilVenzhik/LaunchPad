@@ -5,7 +5,7 @@ namespace LaunchPad.Catalog.Domain.Entities;
 
 public class Agency : Entity<long>
 {
-    public Guid Ll2Id { get; private set; }
+    public int Ll2Id { get; private set; }
     public string Name { get; private set; } = null!;
     public string? Abbrev { get; private set; }
     public AgencyType Type { get; private set; }
@@ -13,6 +13,6 @@ public class Agency : Entity<long>
 
     private Agency() { }
 
-    public static Agency Create(Guid ll2Id, string name, string? abbrev, AgencyType type, string? countryCode)
+    public static Agency Create(int ll2Id, string name, string? abbrev, AgencyType type, string? countryCode)
         => new() { Ll2Id = ll2Id, Name = name, Abbrev = abbrev, Type = type, CountryCode = countryCode };
 }

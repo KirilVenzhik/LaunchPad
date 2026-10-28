@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace LaunchPad.Catalog.Infrastructure.Migrations
 {
     [DbContext(typeof(CatalogDbContext))]
-    [Migration("20260905085944_InitCatalog")]
+    [Migration("20260922225643_InitCatalog")]
     partial class InitCatalog
     {
         /// <inheritdoc />
@@ -39,13 +39,12 @@ namespace LaunchPad.Catalog.Infrastructure.Migrations
                         .HasColumnName("abbrev");
 
                     b.Property<string>("CountryCode")
-                        .HasMaxLength(2)
-                        .HasColumnType("character(2)")
-                        .HasColumnName("country_code")
-                        .IsFixedLength();
+                        .HasMaxLength(10)
+                        .HasColumnType("character varying(10)")
+                        .HasColumnName("country_code");
 
-                    b.Property<Guid>("Ll2Id")
-                        .HasColumnType("uuid")
+                    b.Property<int>("Ll2Id")
+                        .HasColumnType("integer")
                         .HasColumnName("ll2id");
 
                     b.Property<string>("Name")
@@ -215,17 +214,16 @@ namespace LaunchPad.Catalog.Infrastructure.Migrations
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
 
                     b.Property<string>("CountryCode")
-                        .HasMaxLength(2)
-                        .HasColumnType("character(2)")
-                        .HasColumnName("country_code")
-                        .IsFixedLength();
+                        .HasMaxLength(10)
+                        .HasColumnType("character varying(10)")
+                        .HasColumnName("country_code");
 
                     b.Property<double?>("Latitude")
                         .HasColumnType("double precision")
                         .HasColumnName("latitude");
 
-                    b.Property<Guid>("Ll2Id")
-                        .HasColumnType("uuid")
+                    b.Property<int>("Ll2Id")
+                        .HasColumnType("integer")
                         .HasColumnName("ll2id");
 
                     b.Property<double?>("Longitude")
@@ -265,13 +263,13 @@ namespace LaunchPad.Catalog.Infrastructure.Migrations
                         .HasColumnType("text")
                         .HasColumnName("full_name");
 
-                    b.Property<Guid>("Ll2Id")
-                        .HasColumnType("uuid")
+                    b.Property<int>("Ll2Id")
+                        .HasColumnType("integer")
                         .HasColumnName("ll2id");
 
-                    b.Property<int>("ReusableStages")
-                        .HasColumnType("integer")
-                        .HasColumnName("reusable_stages");
+                    b.Property<bool>("Reusable")
+                        .HasColumnType("boolean")
+                        .HasColumnName("reusable");
 
                     b.HasKey("Id")
                         .HasName("pk_rocket_configs");
